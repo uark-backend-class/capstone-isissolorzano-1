@@ -1,0 +1,75 @@
+<div style="margin-top: 15px; margin-bottom: 15px; margin-left: 100px;" >
+    <h2 class="display-2">RemindMe</h2>
+ </div>
+ <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="/">Home</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/allContacts" >Contacts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/allAppointments">Reminders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Log Out</a>
+      </li> 
+    </ul>
+  </div> 
+</nav>
+
+
+
+
+
+<div class="container" style="margin-top: 100px">
+  <h1 class=" font-weight-normal" style="font-family:serif;">Reminder's Contacts</h1>
+  <table class="table table-hover" id = "pushTable">
+        <tbody>
+          {{#with appointment}}
+           {{#each contacts}}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="text-left">{{this.firstName}} {{this.lastName}}</td>
+                    <td class="text-right">{{this.phone}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+               {{/each}} 
+            {{/with}}
+        </tbody>
+    </table>
+
+<h1 class="font-weight-normal" style="font-family:serif;">{{ title }}</h1>
+ <form action="/pushContacts/{{appointment._id}}" method="POST">  
+    
+<button type="submit" class="btn btn-success float-right">Save</button>
+    <table class="table table-hover" id = "pushTable">
+        <tbody>
+            {{#each contacts}}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="text-left"><input type="checkbox" name="contacts[{{this._id}}]">{{this.firstName}} {{this.lastName}}</td>
+                    <td class="text-right">{{this.phone}}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {{/each}}
+        </tbody>
+    </table>
+     
+   </form>  
+            </div>
+</div>
+ 
+   

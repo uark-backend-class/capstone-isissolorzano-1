@@ -1,0 +1,35 @@
+{
+  "name": "capstone-isissolorzano-1",
+  "version": "1.0.0",
+  "description": "Your project description. Sending automated text messages for reminder of an appointment or event and confirming if yes or no. The app will include templates of different types of reminders.  As a default when adding a person to contacts add it to the active template.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index3.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uark-backend-class/capstone-isissolorzano-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uark-backend-class/capstone-isissolorzano-1/issues"
+  },
+  "homepage": "https://github.com/uark-backend-class/capstone-isissolorzano-1#readme",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "mongoose": "^6.0.8",
+    "node-env-run": "^4.0.2",
+    "passport": "^0.5.0",
+    "passport-local-mongoose": "^6.1.0",
+    "twilio": "^3.68.0"
+  }
+}
